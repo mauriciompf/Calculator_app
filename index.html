@@ -19,140 +19,170 @@
     />
     <title>Frontend Mentor | Calculator app</title>
   </head>
-  <body class="bg-theme1-bg-main font-league-spartan">
-    <main class="m-auto w-[85%]">
+  <body class="bg-theme1-bg-main font-league-spartan text-[32px]">
+    <main class="m-auto grid h-screen w-[min(85%,_400px)] place-items-center">
       <div class="grid gap-4 text-theme1-text-white">
-        <div class="flex justify-between">
+        <div class="flex items-center justify-between">
           <h1>calc</h1>
-          <div class="flex items-center">
-            <span>Theme</span>
-            <div class="flex">
-              <div class="grid place-items-center">
-                <label>1</label>
-                <input type="radio" name="" id="" />
-              </div>
-              <div class="grid place-items-center">
-                <label>2</label>
-                <input type="radio" name="" id="" />
-              </div>
-              <div class="grid place-items-center">
-                <label>3</label>
-                <input type="radio" name="" id="" />
-              </div>
+          <div class="col-span-2 row-span-2 grid gap-x-6 text-sm">
+            <div class="col-[2] flex justify-evenly gap-5 pl-[3px] text-xs">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <span class="row-[2] uppercase">Theme</span>
+            <div class="flex gap-3 rounded-full bg-theme1-bg-toggle p-[3px]">
+              <input
+                class="h-4 w-4 cursor-pointer border-transparent bg-transparent text-theme1-key-red checked:bg-[url(none)] focus:ring-theme1-bg-toggle focus:ring-offset-0"
+                value="1"
+                type="radio"
+                name="theme"
+                id=""
+                aria-label="Theme 1"
+                checked
+              />
+              <input
+                class="h-4 w-4 cursor-pointer border-transparent bg-transparent text-theme1-key-red checked:bg-[url(none)] focus:ring-theme1-bg-toggle focus:ring-offset-0"
+                value="2"
+                type="radio"
+                name="theme"
+                id=""
+                aria-label="Theme 2"
+              />
+              <input
+                class="h-4 w-4 cursor-pointer border-transparent bg-transparent text-theme1-key-red checked:bg-[url(none)] focus:ring-theme1-bg-toggle focus:ring-offset-0"
+                value="3"
+                type="radio"
+                name="theme"
+                id=""
+                aria-label="Theme 3"
+              />
             </div>
           </div>
         </div>
         <div class="bg-theme1-bg-scree w-full">
-          <input class="w-full" type="text" value="399,981" />
+          <input
+            class="h-full w-full rounded-lg bg-theme1-bg-screen p-4 py-6 text-right text-[32px]"
+            type="text"
+            value="399,981"
+          />
         </div>
         <div class="rounded-lg bg-theme1-bg-toggle p-4">
           <div class="grid grid-cols-4 gap-3 text-theme1-text-dark">
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               7
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               8
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               9
             </button>
             <button
-              class="text-theme1-text grid-white place-items-center rounded-lg bg-theme1-key-bg p-4 pt-2 text-2xl text-theme1-text-white shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="text-theme1-text grid-white rounded-lg bg-theme1-key-bg p-4 py-2 text-xl uppercase text-theme1-text-white shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow hover:bg-slate-400 focus:bg-slate-400"
               type="button"
             >
               Del
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl uppercase shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl uppercase shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               4
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               5
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               6
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               +
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               1
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               2
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               3
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               -
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               .
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               0
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               /
             </button>
             <button
-              class="grid place-items-center rounded-lg bg-theme1-text-white p-4 pt-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow"
+              class="w-full rounded-lg bg-theme1-key-orange-light p-4 py-2 text-2xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-orange-shadow hover:bg-theme1-text-white focus:bg-theme1-text-white"
               type="button"
             >
               x
             </button>
           </div>
-          <div>
-            <button class="uppercase">Reset</button>
-            <button>=</button>
+          <div class="mt-4 flex justify-between gap-4 text-center">
+            <button
+              class="w-full rounded-md bg-theme1-key-bg py-3 text-xl uppercase shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-shadow hover:bg-slate-400"
+            >
+              Reset
+            </button>
+            <button
+              class="w-full rounded-md bg-theme1-key-red py-3 text-xl shadow-[0px_-4px_0px_hsl(224,_28%,_35%)_inset] shadow-theme1-key-red-shadow hover:bg-red-400"
+            >
+              =
+            </button>
           </div>
         </div>
       </div>
     </main>
     <footer
-      class="absolute bottom-8 left-0 right-0 px-4 text-center text-white"
+      class="text- bottom-2 left-0 right-0 px-4 text-center text-base text-white sm:absolute"
     >
       Challenge by
       <a
